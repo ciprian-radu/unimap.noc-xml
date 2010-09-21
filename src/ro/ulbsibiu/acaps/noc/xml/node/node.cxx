@@ -245,6 +245,36 @@ namespace research
               this->type_.set (x);
             }
 
+            const topologyParameterType::value_optional& topologyParameterType::
+            value () const
+            {
+              return this->value_;
+            }
+
+            topologyParameterType::value_optional& topologyParameterType::
+            value ()
+            {
+              return this->value_;
+            }
+
+            void topologyParameterType::
+            value (const value_type& x)
+            {
+              this->value_.set (x);
+            }
+
+            void topologyParameterType::
+            value (const value_optional& x)
+            {
+              this->value_ = x;
+            }
+
+            void topologyParameterType::
+            value (::std::auto_ptr< value_type > x)
+            {
+              this->value_.set (x);
+            }
+
 
             // linkType
             // 
@@ -271,6 +301,36 @@ namespace research
             type (::std::auto_ptr< type_type > x)
             {
               this->type_.set (x);
+            }
+
+            const linkType::value_optional& linkType::
+            value () const
+            {
+              return this->value_;
+            }
+
+            linkType::value_optional& linkType::
+            value ()
+            {
+              return this->value_;
+            }
+
+            void linkType::
+            value (const value_type& x)
+            {
+              this->value_.set (x);
+            }
+
+            void linkType::
+            value (const value_optional& x)
+            {
+              this->value_ = x;
+            }
+
+            void linkType::
+            value (::std::auto_ptr< value_type > x)
+            {
+              this->value_.set (x);
             }
 
 
@@ -327,6 +387,30 @@ namespace research
             destination (::std::auto_ptr< destination_type > x)
             {
               this->destination_.set (x);
+            }
+
+            const routingTableEntryType::link_type& routingTableEntryType::
+            link () const
+            {
+              return this->link_.get ();
+            }
+
+            routingTableEntryType::link_type& routingTableEntryType::
+            link ()
+            {
+              return this->link_.get ();
+            }
+
+            void routingTableEntryType::
+            link (const link_type& x)
+            {
+              this->link_.set (x);
+            }
+
+            void routingTableEntryType::
+            link (::std::auto_ptr< link_type > x)
+            {
+              this->link_.set (x);
             }
 
 
@@ -551,7 +635,8 @@ namespace research
             topologyParameterType (const topology_type& topology)
             : ::xml_schema::type (),
               topology_ (topology, ::xml_schema::flags (), this),
-              type_ (::xml_schema::flags (), this)
+              type_ (::xml_schema::flags (), this),
+              value_ (::xml_schema::flags (), this)
             {
             }
 
@@ -561,7 +646,8 @@ namespace research
                                    ::xml_schema::container* c)
             : ::xml_schema::type (x, f, c),
               topology_ (x.topology_, f, this),
-              type_ (x.type_, f, this)
+              type_ (x.type_, f, this),
+              value_ (x.value_, f, this)
             {
             }
 
@@ -571,7 +657,8 @@ namespace research
                                    ::xml_schema::container* c)
             : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
               topology_ (f, this),
-              type_ (f, this)
+              type_ (f, this),
+              value_ (f, this)
             {
               if ((f & ::xml_schema::flags::base) == 0)
               {
@@ -607,6 +694,15 @@ namespace research
                   this->type_.set (r);
                   continue;
                 }
+
+                if (n.name () == "value" && n.namespace_ ().empty ())
+                {
+                  ::std::auto_ptr< value_type > r (
+                    value_traits::create (i, f, this));
+
+                  this->value_.set (r);
+                  continue;
+                }
               }
 
               if (!topology_.present ())
@@ -635,7 +731,8 @@ namespace research
             linkType::
             linkType (const type_type& type)
             : ::xml_schema::type (),
-              type_ (type, ::xml_schema::flags (), this)
+              type_ (type, ::xml_schema::flags (), this),
+              value_ (::xml_schema::flags (), this)
             {
             }
 
@@ -644,7 +741,8 @@ namespace research
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
             : ::xml_schema::type (x, f, c),
-              type_ (x.type_, f, this)
+              type_ (x.type_, f, this),
+              value_ (x.value_, f, this)
             {
             }
 
@@ -653,7 +751,8 @@ namespace research
                       ::xml_schema::flags f,
                       ::xml_schema::container* c)
             : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
-              type_ (f, this)
+              type_ (f, this),
+              value_ (f, this)
             {
               if ((f & ::xml_schema::flags::base) == 0)
               {
@@ -678,6 +777,15 @@ namespace research
                     type_traits::create (i, f, this));
 
                   this->type_.set (r);
+                  continue;
+                }
+
+                if (n.name () == "value" && n.namespace_ ().empty ())
+                {
+                  ::std::auto_ptr< value_type > r (
+                    value_traits::create (i, f, this));
+
+                  this->value_.set (r);
                   continue;
                 }
               }
@@ -779,10 +887,12 @@ namespace research
 
             routingTableEntryType::
             routingTableEntryType (const source_type& source,
-                                   const destination_type& destination)
+                                   const destination_type& destination,
+                                   const link_type& link)
             : ::xml_schema::type (),
               source_ (source, ::xml_schema::flags (), this),
-              destination_ (destination, ::xml_schema::flags (), this)
+              destination_ (destination, ::xml_schema::flags (), this),
+              link_ (link, ::xml_schema::flags (), this)
             {
             }
 
@@ -792,7 +902,8 @@ namespace research
                                    ::xml_schema::container* c)
             : ::xml_schema::type (x, f, c),
               source_ (x.source_, f, this),
-              destination_ (x.destination_, f, this)
+              destination_ (x.destination_, f, this),
+              link_ (x.link_, f, this)
             {
             }
 
@@ -802,7 +913,8 @@ namespace research
                                    ::xml_schema::container* c)
             : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
               source_ (f, this),
-              destination_ (f, this)
+              destination_ (f, this),
+              link_ (f, this)
             {
               if ((f & ::xml_schema::flags::base) == 0)
               {
@@ -838,6 +950,15 @@ namespace research
                   this->destination_.set (r);
                   continue;
                 }
+
+                if (n.name () == "link" && n.namespace_ ().empty ())
+                {
+                  ::std::auto_ptr< link_type > r (
+                    link_traits::create (i, f, this));
+
+                  this->link_.set (r);
+                  continue;
+                }
               }
 
               if (!source_.present ())
@@ -851,6 +972,13 @@ namespace research
               {
                 throw ::xsd::cxx::tree::expected_attribute< char > (
                   "destination",
+                  "");
+              }
+
+              if (!link_.present ())
+              {
+                throw ::xsd::cxx::tree::expected_attribute< char > (
+                  "link",
                   "");
               }
             }
@@ -1523,6 +1651,18 @@ namespace research
 
                 a << *i.type ();
               }
+
+              // value
+              //
+              if (i.value ())
+              {
+                ::xercesc::DOMAttr& a (
+                  ::xsd::cxx::xml::dom::create_attribute (
+                    "value",
+                    e));
+
+                a << *i.value ();
+              }
             }
 
             void
@@ -1539,6 +1679,18 @@ namespace research
                     e));
 
                 a << i.type ();
+              }
+
+              // value
+              //
+              if (i.value ())
+              {
+                ::xercesc::DOMAttr& a (
+                  ::xsd::cxx::xml::dom::create_attribute (
+                    "value",
+                    e));
+
+                a << *i.value ();
               }
             }
 
@@ -1586,6 +1738,17 @@ namespace research
                     e));
 
                 a << i.destination ();
+              }
+
+              // link
+              //
+              {
+                ::xercesc::DOMAttr& a (
+                  ::xsd::cxx::xml::dom::create_attribute (
+                    "link",
+                    e));
+
+                a << i.link ();
               }
             }
 

@@ -62,10 +62,20 @@
     <complexType name="topologyParameterType">
     	<attribute name="topology" type="string" use="required">
     		<annotation>
-    			<documentation>The unique identifier of the topology parameter XML (see topology-parameter.xsd)</documentation>
-    		</annotation></attribute>
+    			<documentation>
+    				The unique identifier of the topology parameter XML
+    				(see topology-parameter.xsd)
+    			</documentation>
+    		</annotation>
+    	</attribute>
     	<attribute name="type" type="string" use="required">
     		<annotation>
-    			<documentation>Specifies the topology parameter from the topology parameter XML file.</documentation></annotation></attribute>
+    			<documentation>
+    				Specifies the topology parameter from the topology
+    				parameter XML file.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="value" type="string" use="optional"></attribute>
     </complexType>
 </schema>

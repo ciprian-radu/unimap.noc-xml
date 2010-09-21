@@ -72,14 +72,24 @@
     	</attribute>
     	<attribute name="type" type="string">
     		<annotation>
-    			<documentation>Specifies the topology parameter from the topology parameter XML file.</documentation>
-    		</annotation></attribute>
+    			<documentation>
+    				Specifies the topology parameter from the topology
+    				parameter XML file.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="value" type="string" use="optional"></attribute>
     </complexType>
 
     <complexType name="linkType">
     	<attribute name="type" use="required">
     		<annotation>
-    			<documentation>The type of this link may be "in" or "out". An "in" link is a link that enters into this node, i.e. it brings data. An "out" link is a link that exits from this node, i.e. it sends data.</documentation>
+    			<documentation>
+    				The type of this link may be "in" or "out". An "in"
+    				link is a link that enters into this node, i.e. it
+    				brings data. An "out" link is a link that exits from
+    				this node, i.e. it sends data.
+    			</documentation>
     		</annotation>
     		<simpleType>
     			<restriction base="string">
@@ -88,6 +98,7 @@
     			</restriction>
     		</simpleType>
     	</attribute>
+    	<attribute name="value" type="string"></attribute>
     </complexType>
 
     <simpleType name="typeType">
@@ -97,11 +108,21 @@
     <complexType name="routingTableEntryType">
     	<attribute name="source" type="string" use="required">
     		<annotation>
-    			<documentation>The node from which the traffic came.</documentation>
-    		</annotation></attribute>
+    			<documentation>
+    				The node from which the traffic came.
+    			</documentation>
+    		</annotation>
+    	</attribute>
     	<attribute name="destination" type="string" use="required">
     		<annotation>
-    			<documentation>The node to which the traffic must go.</documentation>
+    			<documentation>
+    				The node to which the traffic must go.
+    			</documentation>
+    		</annotation>
+    	</attribute>
+    	<attribute name="link" type="string" use="required">
+    		<annotation>
+    			<documentation>the ID of the link which will be used to route the traffic from source to destination.</documentation>
     		</annotation></attribute>
     </complexType>
 </schema>

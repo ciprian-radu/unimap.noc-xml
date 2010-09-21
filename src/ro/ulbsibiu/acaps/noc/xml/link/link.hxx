@@ -1147,8 +1147,8 @@ namespace research
                * @brief Accessor and modifier functions for the %topology
                * required attribute.
                *
-               * The unique identifier of the topology parameter XML (see
-               * topology-parameter.xsd)
+               * The unique identifier of the topology parameter XML
+               * (see topology-parameter.xsd)
                */
               //@{
 
@@ -1208,7 +1208,8 @@ namespace research
                * @brief Accessor and modifier functions for the %type
                * required attribute.
                *
-               * Specifies the topology parameter from the topology parameter XML file.
+               * Specifies the topology parameter from the topology
+               * parameter XML file.
                */
               //@{
 
@@ -1259,6 +1260,82 @@ namespace research
                */
               void
               type (::std::auto_ptr< type_type > p);
+
+              //@}
+
+              /**
+               * @name value
+               *
+               * @brief Accessor and modifier functions for the %value
+               * optional attribute.
+               */
+              //@{
+
+              /**
+               * @brief Attribute type.
+               */
+              typedef ::xml_schema::string value_type;
+
+              /**
+               * @brief Attribute optional container type.
+               */
+              typedef ::xsd::cxx::tree::optional< value_type > value_optional;
+
+              /**
+               * @brief Attribute traits type.
+               */
+              typedef ::xsd::cxx::tree::traits< value_type, char > value_traits;
+
+              /**
+               * @brief Return a read-only (constant) reference to the attribute
+               * container.
+               *
+               * @return A constant reference to the optional container.
+               */
+              const value_optional&
+              value () const;
+
+              /**
+               * @brief Return a read-write reference to the attribute container.
+               *
+               * @return A reference to the optional container.
+               */
+              value_optional&
+              value ();
+
+              /**
+               * @brief Set the attribute value.
+               *
+               * @param x A new value to set.
+               *
+               * This function makes a copy of its argument and sets it as
+               * the new value of the attribute.
+               */
+              void
+              value (const value_type& x);
+
+              /**
+               * @brief Set the attribute value.
+               *
+               * @param x An optional container with the new value to set.
+               *
+               * If the value is present in @a x then this function makes a copy 
+               * of this value and sets it as the new value of the attribute.
+               * Otherwise the attribute container is set the 'not present' state.
+               */
+              void
+              value (const value_optional& x);
+
+              /**
+               * @brief Set the attribute value without copying.
+               *
+               * @param p A new value to use.
+               *
+               * This function will try to use the passed value directly instead
+               * of making a copy.
+               */
+              void
+              value (::std::auto_ptr< value_type > p);
 
               //@}
 
@@ -1335,6 +1412,7 @@ namespace research
               protected:
               ::xsd::cxx::tree::one< topology_type > topology_;
               ::xsd::cxx::tree::one< type_type > type_;
+              value_optional value_;
 
               //@endcond
             };

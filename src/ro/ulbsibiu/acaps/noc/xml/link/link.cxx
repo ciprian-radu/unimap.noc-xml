@@ -244,6 +244,36 @@ namespace research
             {
               this->type_.set (x);
             }
+
+            const topologyParameterType::value_optional& topologyParameterType::
+            value () const
+            {
+              return this->value_;
+            }
+
+            topologyParameterType::value_optional& topologyParameterType::
+            value ()
+            {
+              return this->value_;
+            }
+
+            void topologyParameterType::
+            value (const value_type& x)
+            {
+              this->value_.set (x);
+            }
+
+            void topologyParameterType::
+            value (const value_optional& x)
+            {
+              this->value_ = x;
+            }
+
+            void topologyParameterType::
+            value (::std::auto_ptr< value_type > x)
+            {
+              this->value_.set (x);
+            }
           }
         }
       }
@@ -447,7 +477,8 @@ namespace research
                                    const type_type& type)
             : ::xml_schema::type (),
               topology_ (topology, ::xml_schema::flags (), this),
-              type_ (type, ::xml_schema::flags (), this)
+              type_ (type, ::xml_schema::flags (), this),
+              value_ (::xml_schema::flags (), this)
             {
             }
 
@@ -457,7 +488,8 @@ namespace research
                                    ::xml_schema::container* c)
             : ::xml_schema::type (x, f, c),
               topology_ (x.topology_, f, this),
-              type_ (x.type_, f, this)
+              type_ (x.type_, f, this),
+              value_ (x.value_, f, this)
             {
             }
 
@@ -467,7 +499,8 @@ namespace research
                                    ::xml_schema::container* c)
             : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
               topology_ (f, this),
-              type_ (f, this)
+              type_ (f, this),
+              value_ (f, this)
             {
               if ((f & ::xml_schema::flags::base) == 0)
               {
@@ -501,6 +534,15 @@ namespace research
                     type_traits::create (i, f, this));
 
                   this->type_.set (r);
+                  continue;
+                }
+
+                if (n.name () == "value" && n.namespace_ ().empty ())
+                {
+                  ::std::auto_ptr< value_type > r (
+                    value_traits::create (i, f, this));
+
+                  this->value_.set (r);
                   continue;
                 }
               }
@@ -1111,6 +1153,18 @@ namespace research
                     e));
 
                 a << i.type ();
+              }
+
+              // value
+              //
+              if (i.value ())
+              {
+                ::xercesc::DOMAttr& a (
+                  ::xsd::cxx::xml::dom::create_attribute (
+                    "value",
+                    e));
+
+                a << *i.value ();
               }
             }
           }

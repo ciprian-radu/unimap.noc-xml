@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topologyParameter:topology id="mesh2D"
+	name="2D mesh"
+	xmlns:topologyParameter="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/topologyParameter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/topologyParameter ../../xml/schema/topology-parameter.xsd ">
+	<topologyParameter:topologyParameter type="row"/>
+	<topologyParameter:topologyParameter type="column"/>
+</topologyParameter:topology>
