@@ -11,16 +11,4 @@
 	<!-- on what column of a 2D mesh the node is located -->
 	<topologyParameter:topologyParameter type="COLUMN"/>
 	
-	<!-- on what row of a 2D mesh the source node of a link is located -->
-	<topologyParameter:topologyParameter type="ROW_TO"/>
-	
-	<!-- on what column of a 2D mesh the source node of a link is located -->
-	<topologyParameter:topologyParameter type="COLUMN_TO"/>
-	
-	<!-- on what row of a 2D mesh the destination node of a link is located -->
-	<topologyParameter:topologyParameter type="ROW_FROM"/>
-	
-	<!-- on what column of a 2D mesh the destination node of a link is located -->
-	<topologyParameter:topologyParameter type="COLUMN_FROM"/>
-	
 </topologyParameter:topology>

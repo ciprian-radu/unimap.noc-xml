@@ -103,52 +103,52 @@ namespace research
               this->bandwidth_ = x;
             }
 
-            const linkType::sourceNode_type& linkType::
-            sourceNode () const
+            const linkType::firstNode_type& linkType::
+            firstNode () const
             {
-              return this->sourceNode_.get ();
+              return this->firstNode_.get ();
             }
 
-            linkType::sourceNode_type& linkType::
-            sourceNode ()
+            linkType::firstNode_type& linkType::
+            firstNode ()
             {
-              return this->sourceNode_.get ();
-            }
-
-            void linkType::
-            sourceNode (const sourceNode_type& x)
-            {
-              this->sourceNode_.set (x);
+              return this->firstNode_.get ();
             }
 
             void linkType::
-            sourceNode (::std::auto_ptr< sourceNode_type > x)
+            firstNode (const firstNode_type& x)
             {
-              this->sourceNode_.set (x);
-            }
-
-            const linkType::destinationNode_type& linkType::
-            destinationNode () const
-            {
-              return this->destinationNode_.get ();
-            }
-
-            linkType::destinationNode_type& linkType::
-            destinationNode ()
-            {
-              return this->destinationNode_.get ();
+              this->firstNode_.set (x);
             }
 
             void linkType::
-            destinationNode (const destinationNode_type& x)
+            firstNode (::std::auto_ptr< firstNode_type > x)
             {
-              this->destinationNode_.set (x);
+              this->firstNode_.set (x);
+            }
+
+            const linkType::secondNode_type& linkType::
+            secondNode () const
+            {
+              return this->secondNode_.get ();
+            }
+
+            linkType::secondNode_type& linkType::
+            secondNode ()
+            {
+              return this->secondNode_.get ();
             }
 
             void linkType::
-            destinationNode (::std::auto_ptr< destinationNode_type > x)
+            secondNode (const secondNode_type& x)
             {
-              this->destinationNode_.set (x);
+              this->secondNode_.set (x);
+            }
+
+            void linkType::
+            secondNode (::std::auto_ptr< secondNode_type > x)
+            {
+              this->secondNode_.set (x);
             }
 
             const linkType::topologyParameter_sequence& linkType::
@@ -299,14 +299,14 @@ namespace research
             //
 
             linkType::
-            linkType (const sourceNode_type& sourceNode,
-                      const destinationNode_type& destinationNode,
+            linkType (const firstNode_type& firstNode,
+                      const secondNode_type& secondNode,
                       const id_type& id)
             : ::xml_schema::type (),
               cost_ (::xml_schema::flags (), this),
               bandwidth_ (::xml_schema::flags (), this),
-              sourceNode_ (sourceNode, ::xml_schema::flags (), this),
-              destinationNode_ (destinationNode, ::xml_schema::flags (), this),
+              firstNode_ (firstNode, ::xml_schema::flags (), this),
+              secondNode_ (secondNode, ::xml_schema::flags (), this),
               topologyParameter_ (::xml_schema::flags (), this),
               id_ (id, ::xml_schema::flags (), this)
             {
@@ -319,8 +319,8 @@ namespace research
             : ::xml_schema::type (x, f, c),
               cost_ (x.cost_, f, this),
               bandwidth_ (x.bandwidth_, f, this),
-              sourceNode_ (x.sourceNode_, f, this),
-              destinationNode_ (x.destinationNode_, f, this),
+              firstNode_ (x.firstNode_, f, this),
+              secondNode_ (x.secondNode_, f, this),
               topologyParameter_ (x.topologyParameter_, f, this),
               id_ (x.id_, f, this)
             {
@@ -333,8 +333,8 @@ namespace research
             : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
               cost_ (f, this),
               bandwidth_ (f, this),
-              sourceNode_ (f, this),
-              destinationNode_ (f, this),
+              firstNode_ (f, this),
+              secondNode_ (f, this),
               topologyParameter_ (f, this),
               id_ (f, this)
             {
@@ -377,30 +377,30 @@ namespace research
                   }
                 }
 
-                // sourceNode
+                // firstNode
                 //
-                if (n.name () == "sourceNode" && n.namespace_ () == "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link")
+                if (n.name () == "firstNode" && n.namespace_ () == "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link")
                 {
-                  ::std::auto_ptr< sourceNode_type > r (
-                    sourceNode_traits::create (i, f, this));
+                  ::std::auto_ptr< firstNode_type > r (
+                    firstNode_traits::create (i, f, this));
 
-                  if (!sourceNode_.present ())
+                  if (!firstNode_.present ())
                   {
-                    this->sourceNode_.set (r);
+                    this->firstNode_.set (r);
                     continue;
                   }
                 }
 
-                // destinationNode
+                // secondNode
                 //
-                if (n.name () == "destinationNode" && n.namespace_ () == "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link")
+                if (n.name () == "secondNode" && n.namespace_ () == "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link")
                 {
-                  ::std::auto_ptr< destinationNode_type > r (
-                    destinationNode_traits::create (i, f, this));
+                  ::std::auto_ptr< secondNode_type > r (
+                    secondNode_traits::create (i, f, this));
 
-                  if (!destinationNode_.present ())
+                  if (!secondNode_.present ())
                   {
-                    this->destinationNode_.set (r);
+                    this->secondNode_.set (r);
                     continue;
                   }
                 }
@@ -419,17 +419,17 @@ namespace research
                 break;
               }
 
-              if (!sourceNode_.present ())
+              if (!firstNode_.present ())
               {
                 throw ::xsd::cxx::tree::expected_element< char > (
-                  "sourceNode",
+                  "firstNode",
                   "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link");
               }
 
-              if (!destinationNode_.present ())
+              if (!secondNode_.present ())
               {
                 throw ::xsd::cxx::tree::expected_element< char > (
-                  "destinationNode",
+                  "secondNode",
                   "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link");
               }
 
@@ -1077,28 +1077,28 @@ namespace research
                 s << *i.bandwidth ();
               }
 
-              // sourceNode
+              // firstNode
               //
               {
                 ::xercesc::DOMElement& s (
                   ::xsd::cxx::xml::dom::create_element (
-                    "sourceNode",
+                    "firstNode",
                     "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link",
                     e));
 
-                s << i.sourceNode ();
+                s << i.firstNode ();
               }
 
-              // destinationNode
+              // secondNode
               //
               {
                 ::xercesc::DOMElement& s (
                   ::xsd::cxx::xml::dom::create_element (
-                    "destinationNode",
+                    "secondNode",
                     "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link",
                     e));
 
-                s << i.destinationNode ();
+                s << i.secondNode ();
               }
 
               // topologyParameter

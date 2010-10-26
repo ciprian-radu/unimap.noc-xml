@@ -6,7 +6,10 @@
     <element name="link" type="link:linkType"></element>
     
     <complexType name="linkType">
-    	<sequence>
+        <annotation>
+        	<documentation>A link allows a communication either from the first node to the second node, either from the second to the first (the link is bidirectional by default).</documentation>
+        </annotation>
+        <sequence>
     		<element name="cost" type="double" maxOccurs="1"
     			minOccurs="0">
     			<annotation>
@@ -23,21 +26,16 @@
     				</documentation>
     			</annotation>
     		</element>
-    		<element name="sourceNode" type="string" maxOccurs="1"
+    		<element name="firstNode" type="string" maxOccurs="1"
     			minOccurs="1">
     			<annotation>
-    				<documentation>
-    					The NoC node which uses this link to inject
-    					traffic into the network.
-    				</documentation>
+    				<documentation>One of the two NoC nodes connected through this link.</documentation>
     			</annotation>
     		</element>
-    		<element name="destinationNode" type="string" maxOccurs="1"
+    		<element name="secondNode" type="string" maxOccurs="1"
     			minOccurs="1">
     			<annotation>
-    				<documentation>
-    					The NoC node which uses this link to receive
-    					traffic from the network.
+    				<documentation>One of the two NoC nodes connected through this link.
     				</documentation>
     			</annotation>
     		</element>

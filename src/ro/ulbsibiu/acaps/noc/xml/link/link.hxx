@@ -661,6 +661,10 @@ namespace research
             /**
              * @brief Class corresponding to the %linkType schema type.
              *
+             * A link allows a communication either from the first node to the second
+             * node, either from the second to the first (the link is bidirectional
+             * by default).
+             *
              * @nosubgrouping
              */
             class linkType: public ::xml_schema::type
@@ -801,41 +805,40 @@ namespace research
               //@}
 
               /**
-               * @name sourceNode
+               * @name firstNode
                *
-               * @brief Accessor and modifier functions for the %sourceNode
+               * @brief Accessor and modifier functions for the %firstNode
                * required element.
                *
-               * The NoC node which uses this link to inject
-               * traffic into the network.
+               * One of the two NoC nodes connected through this link.
                */
               //@{
 
               /**
                * @brief Element type.
                */
-              typedef ::xml_schema::string sourceNode_type;
+              typedef ::xml_schema::string firstNode_type;
 
               /**
                * @brief Element traits type.
                */
-              typedef ::xsd::cxx::tree::traits< sourceNode_type, char > sourceNode_traits;
+              typedef ::xsd::cxx::tree::traits< firstNode_type, char > firstNode_traits;
 
               /**
                * @brief Return a read-only (constant) reference to the element.
                *
                * @return A constant reference to the element.
                */
-              const sourceNode_type&
-              sourceNode () const;
+              const firstNode_type&
+              firstNode () const;
 
               /**
                * @brief Return a read-write reference to the element.
                *
                * @return A reference to the element.
                */
-              sourceNode_type&
-              sourceNode ();
+              firstNode_type&
+              firstNode ();
 
               /**
                * @brief Set the element value.
@@ -846,7 +849,7 @@ namespace research
                * the new value of the element.
                */
               void
-              sourceNode (const sourceNode_type& x);
+              firstNode (const firstNode_type& x);
 
               /**
                * @brief Set the element value without copying.
@@ -857,46 +860,45 @@ namespace research
                * instead of making a copy.
                */
               void
-              sourceNode (::std::auto_ptr< sourceNode_type > p);
+              firstNode (::std::auto_ptr< firstNode_type > p);
 
               //@}
 
               /**
-               * @name destinationNode
+               * @name secondNode
                *
-               * @brief Accessor and modifier functions for the %destinationNode
+               * @brief Accessor and modifier functions for the %secondNode
                * required element.
                *
-               * The NoC node which uses this link to receive
-               * traffic from the network.
+               * One of the two NoC nodes connected through this link.
                */
               //@{
 
               /**
                * @brief Element type.
                */
-              typedef ::xml_schema::string destinationNode_type;
+              typedef ::xml_schema::string secondNode_type;
 
               /**
                * @brief Element traits type.
                */
-              typedef ::xsd::cxx::tree::traits< destinationNode_type, char > destinationNode_traits;
+              typedef ::xsd::cxx::tree::traits< secondNode_type, char > secondNode_traits;
 
               /**
                * @brief Return a read-only (constant) reference to the element.
                *
                * @return A constant reference to the element.
                */
-              const destinationNode_type&
-              destinationNode () const;
+              const secondNode_type&
+              secondNode () const;
 
               /**
                * @brief Return a read-write reference to the element.
                *
                * @return A reference to the element.
                */
-              destinationNode_type&
-              destinationNode ();
+              secondNode_type&
+              secondNode ();
 
               /**
                * @brief Set the element value.
@@ -907,7 +909,7 @@ namespace research
                * the new value of the element.
                */
               void
-              destinationNode (const destinationNode_type& x);
+              secondNode (const secondNode_type& x);
 
               /**
                * @brief Set the element value without copying.
@@ -918,7 +920,7 @@ namespace research
                * instead of making a copy.
                */
               void
-              destinationNode (::std::auto_ptr< destinationNode_type > p);
+              secondNode (::std::auto_ptr< secondNode_type > p);
 
               //@}
 
@@ -1060,8 +1062,8 @@ namespace research
                * @brief Create an instance from the ultimate base and
                * initializers for required elements and attributes.
                */
-              linkType (const sourceNode_type&,
-                        const destinationNode_type&,
+              linkType (const firstNode_type&,
+                        const secondNode_type&,
                         const id_type&);
 
               /**
@@ -1125,8 +1127,8 @@ namespace research
               protected:
               cost_optional cost_;
               bandwidth_optional bandwidth_;
-              ::xsd::cxx::tree::one< sourceNode_type > sourceNode_;
-              ::xsd::cxx::tree::one< destinationNode_type > destinationNode_;
+              ::xsd::cxx::tree::one< firstNode_type > firstNode_;
+              ::xsd::cxx::tree::one< secondNode_type > secondNode_;
               topologyParameter_sequence topologyParameter_;
               ::xsd::cxx::tree::one< id_type > id_;
 
