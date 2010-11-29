@@ -1074,7 +1074,7 @@ namespace research
                     "http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/link",
                     e));
 
-                s << *i.bandwidth ();
+                s << ::xml_schema::as_double(*i.bandwidth ());
               }
 
               // firstNode

@@ -750,7 +750,7 @@ namespace research
               /**
                * @brief Element type.
                */
-              typedef ::xml_schema::int_ bandwidth_type;
+              typedef ::xml_schema::double_ bandwidth_type;
 
               /**
                * @brief Element optional container type.
@@ -760,7 +760,7 @@ namespace research
               /**
                * @brief Element traits type.
                */
-              typedef ::xsd::cxx::tree::traits< bandwidth_type, char > bandwidth_traits;
+              typedef ::xsd::cxx::tree::traits< bandwidth_type, char, ::xsd::cxx::tree::schema_type::double_ > bandwidth_traits;
 
               /**
                * @brief Return a read-only (constant) reference to the element
