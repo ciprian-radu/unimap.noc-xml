@@ -17,12 +17,12 @@
     <routingTableEntry link="24" destination="8" source="4"/>
     <routingTableEntry link="24" destination="9" source="4"/>
     <routingTableEntry link="24" destination="10" source="4"/>
-    <routingTableEntry link="24" destination="11" source="4"/>
+    <routingTableEntry link="3" destination="11" source="4"/>
     <routingTableEntry link="24" destination="12" source="4"/>
     <routingTableEntry link="24" destination="13" source="4"/>
     <routingTableEntry link="24" destination="14" source="4"/>
     <routingTableEntry link="24" destination="15" source="4"/>
-    <routingTableEntry link="3" destination="16" source="4"/>
+    <routingTableEntry link="24" destination="16" source="4"/>
     <routingTableEntry link="24" destination="17" source="4"/>
     <routingTableEntry link="24" destination="18" source="4"/>
     <routingTableEntry link="24" destination="19" source="4"/>

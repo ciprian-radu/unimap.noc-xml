@@ -10,21 +10,15 @@
     <link value="21" type="out"/>
     <link value="21" type="in"/>
     <routingTableEntry link="10" destination="14" source="0"/>
-    <routingTableEntry link="10" destination="15" source="0"/>
     <routingTableEntry link="10" destination="14" source="1"/>
-    <routingTableEntry link="10" destination="15" source="1"/>
     <routingTableEntry link="9" destination="12" source="2"/>
     <routingTableEntry link="9" destination="12" source="3"/>
     <routingTableEntry link="10" destination="14" source="4"/>
-    <routingTableEntry link="10" destination="15" source="4"/>
     <routingTableEntry link="10" destination="14" source="5"/>
-    <routingTableEntry link="10" destination="15" source="5"/>
     <routingTableEntry link="9" destination="12" source="6"/>
     <routingTableEntry link="9" destination="12" source="7"/>
     <routingTableEntry link="10" destination="14" source="8"/>
-    <routingTableEntry link="10" destination="15" source="8"/>
     <routingTableEntry link="10" destination="14" source="9"/>
-    <routingTableEntry link="10" destination="15" source="9"/>
     <routingTableEntry link="9" destination="12" source="10"/>
     <routingTableEntry link="9" destination="12" source="11"/>
     <routingTableEntry link="21" destination="1" source="12"/>
@@ -53,18 +47,6 @@
     <routingTableEntry link="9" destination="12" source="13"/>
     <routingTableEntry link="10" destination="14" source="13"/>
     <routingTableEntry link="10" destination="15" source="13"/>
-    <routingTableEntry link="9" destination="0" source="14"/>
-    <routingTableEntry link="21" destination="1" source="14"/>
-    <routingTableEntry link="9" destination="4" source="14"/>
-    <routingTableEntry link="21" destination="5" source="14"/>
-    <routingTableEntry link="9" destination="8" source="14"/>
-    <routingTableEntry link="21" destination="9" source="14"/>
     <routingTableEntry link="9" destination="12" source="14"/>
-    <routingTableEntry link="9" destination="0" source="15"/>
-    <routingTableEntry link="21" destination="1" source="15"/>
-    <routingTableEntry link="9" destination="4" source="15"/>
-    <routingTableEntry link="21" destination="5" source="15"/>
-    <routingTableEntry link="9" destination="8" source="15"/>
-    <routingTableEntry link="21" destination="9" source="15"/>
     <routingTableEntry link="9" destination="12" source="15"/>
 </node>

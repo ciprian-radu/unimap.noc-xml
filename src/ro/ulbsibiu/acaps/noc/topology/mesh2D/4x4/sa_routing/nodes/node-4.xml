@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node core="11" id="4" xmlns="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/node">
+<node core="-1" id="4" xmlns="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/node">
     <cost>0.2840000092983246</cost>
     <topologyParameter value="1" type="row" topology="mesh2D"/>
     <topologyParameter value="0" type="column" topology="mesh2D"/>
@@ -13,10 +13,6 @@
     <routingTableEntry link="16" destination="12" source="0"/>
     <routingTableEntry link="16" destination="8" source="1"/>
     <routingTableEntry link="16" destination="12" source="1"/>
-    <routingTableEntry link="16" destination="8" source="2"/>
-    <routingTableEntry link="16" destination="12" source="2"/>
-    <routingTableEntry link="16" destination="8" source="3"/>
-    <routingTableEntry link="16" destination="12" source="3"/>
     <routingTableEntry link="12" destination="0" source="4"/>
     <routingTableEntry link="3" destination="1" source="4"/>
     <routingTableEntry link="3" destination="2" source="4"/>
@@ -35,18 +31,8 @@
     <routingTableEntry link="12" destination="0" source="5"/>
     <routingTableEntry link="16" destination="8" source="5"/>
     <routingTableEntry link="16" destination="12" source="5"/>
-    <routingTableEntry link="12" destination="0" source="6"/>
-    <routingTableEntry link="16" destination="8" source="6"/>
-    <routingTableEntry link="16" destination="12" source="6"/>
-    <routingTableEntry link="12" destination="0" source="7"/>
-    <routingTableEntry link="16" destination="8" source="7"/>
-    <routingTableEntry link="16" destination="12" source="7"/>
     <routingTableEntry link="12" destination="0" source="8"/>
     <routingTableEntry link="12" destination="0" source="9"/>
-    <routingTableEntry link="12" destination="0" source="10"/>
-    <routingTableEntry link="12" destination="0" source="11"/>
     <routingTableEntry link="12" destination="0" source="12"/>
     <routingTableEntry link="12" destination="0" source="13"/>
-    <routingTableEntry link="12" destination="0" source="14"/>
-    <routingTableEntry link="12" destination="0" source="15"/>
 </node>

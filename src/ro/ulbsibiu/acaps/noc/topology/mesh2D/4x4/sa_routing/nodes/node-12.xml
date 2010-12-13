@@ -25,10 +25,4 @@
     <routingTableEntry link="20" destination="0" source="13"/>
     <routingTableEntry link="20" destination="4" source="13"/>
     <routingTableEntry link="20" destination="8" source="13"/>
-    <routingTableEntry link="20" destination="0" source="14"/>
-    <routingTableEntry link="20" destination="4" source="14"/>
-    <routingTableEntry link="20" destination="8" source="14"/>
-    <routingTableEntry link="20" destination="0" source="15"/>
-    <routingTableEntry link="20" destination="4" source="15"/>
-    <routingTableEntry link="20" destination="8" source="15"/>
 </node>

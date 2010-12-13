@@ -42,7 +42,7 @@
     <routingTableEntry link="3" destination="29" source="1"/>
     <routingTableEntry link="33" destination="33" source="1"/>
     <routingTableEntry link="33" destination="34" source="1"/>
-    <routingTableEntry link="3" destination="35" source="1"/>
+    <routingTableEntry link="33" destination="35" source="1"/>
     <routingTableEntry link="3" destination="4" source="2"/>
     <routingTableEntry link="3" destination="5" source="2"/>
     <routingTableEntry link="33" destination="9" source="2"/>

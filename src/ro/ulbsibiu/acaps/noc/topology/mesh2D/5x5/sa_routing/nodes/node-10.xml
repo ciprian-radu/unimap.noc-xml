@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node core="7" id="10" xmlns="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/node">
+<node core="15" id="10" xmlns="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/node">
     <cost>0.2840000092983246</cost>
     <topologyParameter value="2" type="row" topology="mesh2D"/>
     <topologyParameter value="0" type="column" topology="mesh2D"/>
@@ -20,9 +20,9 @@
     <routingTableEntry link="8" destination="19" source="0"/>
     <routingTableEntry link="30" destination="20" source="0"/>
     <routingTableEntry link="8" destination="21" source="0"/>
-    <routingTableEntry link="8" destination="22" source="0"/>
+    <routingTableEntry link="30" destination="22" source="0"/>
     <routingTableEntry link="8" destination="23" source="0"/>
-    <routingTableEntry link="30" destination="24" source="0"/>
+    <routingTableEntry link="8" destination="24" source="0"/>
     <routingTableEntry link="30" destination="15" source="1"/>
     <routingTableEntry link="30" destination="20" source="1"/>
     <routingTableEntry link="30" destination="15" source="2"/>
@@ -38,11 +38,11 @@
     <routingTableEntry link="30" destination="15" source="5"/>
     <routingTableEntry link="8" destination="16" source="5"/>
     <routingTableEntry link="8" destination="17" source="5"/>
-    <routingTableEntry link="8" destination="18" source="5"/>
-    <routingTableEntry link="8" destination="19" source="5"/>
+    <routingTableEntry link="30" destination="18" source="5"/>
+    <routingTableEntry link="30" destination="19" source="5"/>
     <routingTableEntry link="30" destination="20" source="5"/>
-    <routingTableEntry link="30" destination="21" source="5"/>
-    <routingTableEntry link="30" destination="22" source="5"/>
+    <routingTableEntry link="8" destination="21" source="5"/>
+    <routingTableEntry link="8" destination="22" source="5"/>
     <routingTableEntry link="8" destination="23" source="5"/>
     <routingTableEntry link="30" destination="24" source="5"/>
     <routingTableEntry link="30" destination="15" source="6"/>
@@ -94,15 +94,15 @@
     <routingTableEntry link="30" destination="15" source="14"/>
     <routingTableEntry link="30" destination="20" source="14"/>
     <routingTableEntry link="25" destination="0" source="15"/>
-    <routingTableEntry link="25" destination="1" source="15"/>
-    <routingTableEntry link="8" destination="2" source="15"/>
+    <routingTableEntry link="8" destination="1" source="15"/>
+    <routingTableEntry link="25" destination="2" source="15"/>
     <routingTableEntry link="25" destination="3" source="15"/>
-    <routingTableEntry link="25" destination="4" source="15"/>
+    <routingTableEntry link="8" destination="4" source="15"/>
     <routingTableEntry link="25" destination="5" source="15"/>
     <routingTableEntry link="8" destination="6" source="15"/>
-    <routingTableEntry link="8" destination="7" source="15"/>
+    <routingTableEntry link="25" destination="7" source="15"/>
     <routingTableEntry link="25" destination="8" source="15"/>
-    <routingTableEntry link="25" destination="9" source="15"/>
+    <routingTableEntry link="8" destination="9" source="15"/>
     <routingTableEntry link="8" destination="11" source="15"/>
     <routingTableEntry link="8" destination="12" source="15"/>
     <routingTableEntry link="8" destination="13" source="15"/>
@@ -118,13 +118,13 @@
     <routingTableEntry link="25" destination="0" source="20"/>
     <routingTableEntry link="8" destination="1" source="20"/>
     <routingTableEntry link="8" destination="2" source="20"/>
-    <routingTableEntry link="25" destination="3" source="20"/>
-    <routingTableEntry link="8" destination="4" source="20"/>
+    <routingTableEntry link="8" destination="3" source="20"/>
+    <routingTableEntry link="25" destination="4" source="20"/>
     <routingTableEntry link="25" destination="5" source="20"/>
-    <routingTableEntry link="25" destination="6" source="20"/>
+    <routingTableEntry link="8" destination="6" source="20"/>
     <routingTableEntry link="8" destination="7" source="20"/>
     <routingTableEntry link="8" destination="8" source="20"/>
-    <routingTableEntry link="25" destination="9" source="20"/>
+    <routingTableEntry link="8" destination="9" source="20"/>
     <routingTableEntry link="8" destination="11" source="20"/>
     <routingTableEntry link="8" destination="12" source="20"/>
     <routingTableEntry link="8" destination="13" source="20"/>
