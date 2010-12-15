@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<node core="14" id="26" xmlns="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/node">
+<node core="28" id="26" xmlns="http://webspace.ulbsibiu.ro/ciprian.radu/research/noc/application_mapping/unified_framework/schema/node">
     <cost>0.2840000092983246</cost>
     <topologyParameter value="4" type="row" topology="mesh2D"/>
     <topologyParameter value="2" type="column" topology="mesh2D"/>
@@ -33,7 +33,7 @@
     <routingTableEntry link="56" destination="32" source="2"/>
     <routingTableEntry link="22" destination="33" source="2"/>
     <routingTableEntry link="22" destination="34" source="2"/>
-    <routingTableEntry link="22" destination="35" source="2"/>
+    <routingTableEntry link="56" destination="35" source="2"/>
     <routingTableEntry link="21" destination="24" source="3"/>
     <routingTableEntry link="21" destination="25" source="3"/>
     <routingTableEntry link="56" destination="30" source="3"/>
@@ -71,7 +71,7 @@
     <routingTableEntry link="56" destination="32" source="8"/>
     <routingTableEntry link="22" destination="33" source="8"/>
     <routingTableEntry link="22" destination="34" source="8"/>
-    <routingTableEntry link="56" destination="35" source="8"/>
+    <routingTableEntry link="22" destination="35" source="8"/>
     <routingTableEntry link="21" destination="24" source="9"/>
     <routingTableEntry link="21" destination="25" source="9"/>
     <routingTableEntry link="56" destination="30" source="9"/>
@@ -200,18 +200,18 @@
     <routingTableEntry link="22" destination="34" source="25"/>
     <routingTableEntry link="22" destination="35" source="25"/>
     <routingTableEntry link="50" destination="0" source="26"/>
-    <routingTableEntry link="50" destination="1" source="26"/>
+    <routingTableEntry link="21" destination="1" source="26"/>
     <routingTableEntry link="50" destination="2" source="26"/>
     <routingTableEntry link="22" destination="3" source="26"/>
-    <routingTableEntry link="50" destination="4" source="26"/>
-    <routingTableEntry link="50" destination="5" source="26"/>
-    <routingTableEntry link="50" destination="6" source="26"/>
-    <routingTableEntry link="50" destination="7" source="26"/>
+    <routingTableEntry link="22" destination="4" source="26"/>
+    <routingTableEntry link="22" destination="5" source="26"/>
+    <routingTableEntry link="21" destination="6" source="26"/>
+    <routingTableEntry link="21" destination="7" source="26"/>
     <routingTableEntry link="50" destination="8" source="26"/>
     <routingTableEntry link="22" destination="9" source="26"/>
     <routingTableEntry link="22" destination="10" source="26"/>
     <routingTableEntry link="22" destination="11" source="26"/>
-    <routingTableEntry link="21" destination="12" source="26"/>
+    <routingTableEntry link="50" destination="12" source="26"/>
     <routingTableEntry link="50" destination="13" source="26"/>
     <routingTableEntry link="50" destination="14" source="26"/>
     <routingTableEntry link="22" destination="15" source="26"/>
@@ -221,7 +221,7 @@
     <routingTableEntry link="50" destination="19" source="26"/>
     <routingTableEntry link="50" destination="20" source="26"/>
     <routingTableEntry link="22" destination="21" source="26"/>
-    <routingTableEntry link="22" destination="22" source="26"/>
+    <routingTableEntry link="50" destination="22" source="26"/>
     <routingTableEntry link="22" destination="23" source="26"/>
     <routingTableEntry link="21" destination="24" source="26"/>
     <routingTableEntry link="21" destination="25" source="26"/>
@@ -235,12 +235,12 @@
     <routingTableEntry link="22" destination="34" source="26"/>
     <routingTableEntry link="22" destination="35" source="26"/>
     <routingTableEntry link="50" destination="0" source="27"/>
-    <routingTableEntry link="50" destination="1" source="27"/>
+    <routingTableEntry link="21" destination="1" source="27"/>
     <routingTableEntry link="50" destination="2" source="27"/>
-    <routingTableEntry link="50" destination="6" source="27"/>
+    <routingTableEntry link="21" destination="6" source="27"/>
     <routingTableEntry link="50" destination="7" source="27"/>
     <routingTableEntry link="50" destination="8" source="27"/>
-    <routingTableEntry link="50" destination="12" source="27"/>
+    <routingTableEntry link="21" destination="12" source="27"/>
     <routingTableEntry link="50" destination="13" source="27"/>
     <routingTableEntry link="50" destination="14" source="27"/>
     <routingTableEntry link="50" destination="18" source="27"/>
@@ -251,14 +251,14 @@
     <routingTableEntry link="56" destination="30" source="27"/>
     <routingTableEntry link="56" destination="31" source="27"/>
     <routingTableEntry link="56" destination="32" source="27"/>
-    <routingTableEntry link="21" destination="0" source="28"/>
-    <routingTableEntry link="21" destination="1" source="28"/>
+    <routingTableEntry link="50" destination="0" source="28"/>
+    <routingTableEntry link="50" destination="1" source="28"/>
     <routingTableEntry link="50" destination="2" source="28"/>
     <routingTableEntry link="50" destination="6" source="28"/>
     <routingTableEntry link="21" destination="7" source="28"/>
     <routingTableEntry link="50" destination="8" source="28"/>
     <routingTableEntry link="50" destination="12" source="28"/>
-    <routingTableEntry link="21" destination="13" source="28"/>
+    <routingTableEntry link="50" destination="13" source="28"/>
     <routingTableEntry link="50" destination="14" source="28"/>
     <routingTableEntry link="21" destination="18" source="28"/>
     <routingTableEntry link="50" destination="19" source="28"/>
@@ -272,7 +272,7 @@
     <routingTableEntry link="50" destination="1" source="29"/>
     <routingTableEntry link="50" destination="2" source="29"/>
     <routingTableEntry link="50" destination="6" source="29"/>
-    <routingTableEntry link="50" destination="7" source="29"/>
+    <routingTableEntry link="21" destination="7" source="29"/>
     <routingTableEntry link="50" destination="8" source="29"/>
     <routingTableEntry link="50" destination="12" source="29"/>
     <routingTableEntry link="50" destination="13" source="29"/>
@@ -318,20 +318,20 @@
     <routingTableEntry link="50" destination="0" source="32"/>
     <routingTableEntry link="50" destination="1" source="32"/>
     <routingTableEntry link="50" destination="2" source="32"/>
-    <routingTableEntry link="22" destination="3" source="32"/>
+    <routingTableEntry link="50" destination="3" source="32"/>
     <routingTableEntry link="22" destination="4" source="32"/>
-    <routingTableEntry link="50" destination="5" source="32"/>
-    <routingTableEntry link="50" destination="6" source="32"/>
+    <routingTableEntry link="22" destination="5" source="32"/>
+    <routingTableEntry link="21" destination="6" source="32"/>
     <routingTableEntry link="50" destination="7" source="32"/>
     <routingTableEntry link="50" destination="8" source="32"/>
-    <routingTableEntry link="22" destination="9" source="32"/>
-    <routingTableEntry link="50" destination="10" source="32"/>
+    <routingTableEntry link="50" destination="9" source="32"/>
+    <routingTableEntry link="22" destination="10" source="32"/>
     <routingTableEntry link="22" destination="11" source="32"/>
     <routingTableEntry link="50" destination="12" source="32"/>
     <routingTableEntry link="50" destination="13" source="32"/>
     <routingTableEntry link="50" destination="14" source="32"/>
-    <routingTableEntry link="22" destination="15" source="32"/>
-    <routingTableEntry link="22" destination="16" source="32"/>
+    <routingTableEntry link="50" destination="15" source="32"/>
+    <routingTableEntry link="50" destination="16" source="32"/>
     <routingTableEntry link="22" destination="17" source="32"/>
     <routingTableEntry link="50" destination="18" source="32"/>
     <routingTableEntry link="50" destination="19" source="32"/>
@@ -350,19 +350,19 @@
     <routingTableEntry link="50" destination="6" source="33"/>
     <routingTableEntry link="50" destination="7" source="33"/>
     <routingTableEntry link="50" destination="8" source="33"/>
-    <routingTableEntry link="21" destination="12" source="33"/>
-    <routingTableEntry link="50" destination="13" source="33"/>
+    <routingTableEntry link="50" destination="12" source="33"/>
+    <routingTableEntry link="21" destination="13" source="33"/>
     <routingTableEntry link="50" destination="14" source="33"/>
-    <routingTableEntry link="21" destination="18" source="33"/>
-    <routingTableEntry link="50" destination="19" source="33"/>
+    <routingTableEntry link="50" destination="18" source="33"/>
+    <routingTableEntry link="21" destination="19" source="33"/>
     <routingTableEntry link="50" destination="20" source="33"/>
     <routingTableEntry link="21" destination="24" source="33"/>
     <routingTableEntry link="21" destination="25" source="33"/>
     <routingTableEntry link="50" destination="0" source="34"/>
-    <routingTableEntry link="50" destination="1" source="34"/>
+    <routingTableEntry link="21" destination="1" source="34"/>
     <routingTableEntry link="50" destination="2" source="34"/>
-    <routingTableEntry link="21" destination="6" source="34"/>
-    <routingTableEntry link="50" destination="7" source="34"/>
+    <routingTableEntry link="50" destination="6" source="34"/>
+    <routingTableEntry link="21" destination="7" source="34"/>
     <routingTableEntry link="50" destination="8" source="34"/>
     <routingTableEntry link="50" destination="12" source="34"/>
     <routingTableEntry link="50" destination="13" source="34"/>
@@ -372,11 +372,11 @@
     <routingTableEntry link="50" destination="20" source="34"/>
     <routingTableEntry link="21" destination="24" source="34"/>
     <routingTableEntry link="21" destination="25" source="34"/>
-    <routingTableEntry link="50" destination="0" source="35"/>
-    <routingTableEntry link="21" destination="1" source="35"/>
+    <routingTableEntry link="21" destination="0" source="35"/>
+    <routingTableEntry link="50" destination="1" source="35"/>
     <routingTableEntry link="50" destination="2" source="35"/>
-    <routingTableEntry link="21" destination="6" source="35"/>
-    <routingTableEntry link="50" destination="7" source="35"/>
+    <routingTableEntry link="50" destination="6" source="35"/>
+    <routingTableEntry link="21" destination="7" source="35"/>
     <routingTableEntry link="50" destination="8" source="35"/>
     <routingTableEntry link="50" destination="12" source="35"/>
     <routingTableEntry link="50" destination="13" source="35"/>
